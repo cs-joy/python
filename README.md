@@ -121,4 +121,23 @@ Before version 3.0, Python had two kinds of classes (both using the same syntax)
 
 The long-term plan is to support gradual typing. Python's syntax allows specifying static types, but they are not checked in the default implementation, CPython. An experimental optional static type-checker, mypy, supports compile-time type checking.
 
+## Programming examples
+Hello world program:
+```python
+print('Hello, world!')
+```
+Program to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of a positive integer:
+```py
+n = int(input('Type a number, and its factorial will be printed: '))
+
+if n < 0:
+    raise ValueError('You must enter a non-negative integer')
+
+factorial = 1
+for i in range(2, n + 1):
+    factorial *= i
+
+print(factorial)
+```
+
 > Read more to follow [Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
