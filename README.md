@@ -55,6 +55,31 @@ Python is meant to be an easily readable language. Its formatting is visually un
 ### Indentation
 Main article: [Python syntax and semantics § Indentation](https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Indentation)
 
-Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks. An increase in indentation comes after certain statements; a decrease in indentation signifies the end of the current block. Thus, the program's visual structure accurately represents its semantic structure. This feature is sometimes termed the off-side rule. Some other languages use indentation this way; but in most, indentation has no semantic meaning. The recommended indent size is four spaces
+Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks. An increase in indentation comes after certain statements; a decrease in indentation signifies the end of the current block. Thus, the program's visual structure accurately represents its semantic structure. This feature is sometimes termed the off-side rule. Some other languages use indentation this way; but in most, indentation has no semantic meaning. The recommended indent size is four spaces.
+
+### Statements and control flow
+Python's statements include:
+
+- The assignment statement, using a single equals sign =
+- The if statement, which conditionally executes a block of code, along with else and elif (a contraction of else-if)
+- The for statement, which iterates over an iterable object, capturing each element to a local variable for use by the attached block
+- The while statement, which executes a block of code as long as its condition is true
+- The try statement, which allows exceptions raised in its attached code block to be caught and handled by except clauses (or new syntax except* in Python 3.11 for exception groups[84]); it also ensures that clean-up code in a finally block is always run regardless of how the block exits
+- The raise statement, used to raise a specified exception or re-raise a caught exception
+- The class statement, which executes a block of code and attaches its local namespace to a class, for use in object-oriented programming
+- The def statement, which defines a function or method
+- The with statement, which encloses a code block within a context manager (for example, acquiring a lock before it is run, then releasing the lock; or opening and closing a file), allowing resource-acquisition-is-initialization (RAII)-like behavior and replacing a common try/finally idiom
+- The break statement, which exits a loop
+- The continue statement, which skips the current iteration and continues with the next
+- The del statement, which removes a variable—deleting the reference from the name to the value, and producing an error if the variable is referred to before it is redefined
+- The pass statement, serving as a NOP, syntactically needed to create an empty code block
+- The assert statement, used in debugging to check for conditions that should apply
+- The yield statement, which returns a value from a generator function (and also an operator); used to implement coroutines
+- The return statement, used to return a value from a function
+- The import statement, used to import modules whose functions or variables can be used in the current program
+
+The assignment statement (=) binds a name as a reference to a separate, dynamically-allocated object. Variables may subsequently be rebound at any time to any object. In Python, a variable name is a generic reference holder without a fixed data type; however, it always refers to some object with a type. This is called dynamic typing—in contrast to statically-typed languages, where each variable may contain only a value of a certain type.
+
+Python does not support tail call optimization or first-class continuations, and, according to van Rossum, it never will. However, better support for coroutine-like functionality is provided by extending Python's generators. Before 2.5, generators were lazy iterators; data was passed unidirectionally out of the generator. From Python 2.5 on, it is possible to pass data back into a generator function; and from version 3.3, it can be passed through multiple stack levels.
 
 > Read more to follow [Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
