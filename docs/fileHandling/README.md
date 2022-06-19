@@ -18,3 +18,16 @@ In addition you can specify if the file should be handled as `binary` or `text` 
 
 "b" - Binary - Binary mode (e.g. images)
 ```
+
+### Syntax
+To open a file for reading it is enough to specify the name of the file:
+```py
+f = open("demofile.txt")
+```
+The code above is the same as:
+```python
+f = open("demofile.txt", "rt")
+```
+Because `"r"` for read, and `"t"` for text are the default values, you do not need to specify them.
+
+> Note: Make sure the file exists, or else you will get an error.
