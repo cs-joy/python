@@ -1,3 +1,7 @@
+Pandas is a Python library.
+
+Pandas is used to analyze data.
+
 ## What is Pandas?
 Pandas is a Python library used for working with data sets.
 
